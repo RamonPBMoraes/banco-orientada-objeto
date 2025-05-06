@@ -1,3 +1,53 @@
+
+class tapiocas{
+    igrediente1;
+    igrediente2;
+    igrediente3;
+    igrediente4;
+    igrediente5;
+    valor;
+ }
+
+class pedido{
+    valorTotal = 10;
+    troco = 0;
+    quant = 0;
+    Endereço = "";
+
+     ped(q,valor,end,dinheiro){
+      
+        
+        this.valorTotal = valor * q;
+        this.quant = q ;
+        this.troco = this.valorTotal - dinheiro;       
+        this.Endereço = end;
+      
+    }
+    }
+
+
+const tapiocapizza = new tapiocas();
+
+tapiocapizza.igrediente1 = "Presunto";
+tapiocapizza.igrediente2 = "Mussarela";
+tapiocapizza.igrediente3 = "oregano";
+tapiocapizza.igrediente4 = "Tomate";
+tapiocapizza.valor = 10;
+
+const tapiocadoce = new tapiocas();
+tapiocadoce.igrediente1 = "Nuttela";
+tapiocadoce.igrediente2 = "Banana";
+tapiocadoce.igrediente3 = "Paçoca";
+tapiocadoce.valor = 15;
+
+console.log(tapiocapizza);
+console.log(tapiocadoce);
+
+const pedido1 = new pedido();
+pedido1.ped(2,100,"Rua Jatobá 305 Recanto Verde",100);
+console.log(pedido1);
+
+
 class   cliente {
     nome;
     cpf;
@@ -26,10 +76,10 @@ class contaCorrente{
 const contaCorrenteRamon = new contaCorrente();
 contaCorrenteRamon.agencia = 1001;
 
-contaCorrenteRamon.depositar(100);
+contaCorrenteRamon.depositar(200);
 
 
-const valorSacado = contaCorrenteRamon.sacar(50);
+const valorSacado = contaCorrenteRamon.sacar(100);
 console.log(valorSacado);
 console.log(contaCorrenteRamon);
  
